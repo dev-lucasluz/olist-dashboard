@@ -1,0 +1,5 @@
+dados/
+GUIA_MONTAGEM.md
+__pycache__/
+*.tmp
+.vscode/
