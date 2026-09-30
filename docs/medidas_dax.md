@@ -73,9 +73,11 @@ Pedidos com Entrega Avaliada =
 CALCULATE (
     COUNTROWS ( fato_pedidos ),
     fato_pedidos[status] = "delivered",
-    fato_pedidos[entregue_no_prazo] <> BLANK ()
+    FILTER ( fato_pedidos, NOT ISBLANK ( fato_pedidos[entregue_no_prazo] ) )
 )
 ```
+
+No DAX, `0 = BLANK()` é verdadeiro. Por isso a comparação `<> BLANK ()` descartaria também os pedidos com valor 0 (os atrasados) e não só os vazios. `ISBLANK` só é verdadeiro para vazio de verdade.
 
 ```dax
 % Entregue no Prazo =
