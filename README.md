@@ -16,7 +16,23 @@ Dashboard em Power BI sobre o dataset público de e-commerce da Olist, com quatr
 3. **Produtos e vendedores:** categorias que mais geram receita e os dez maiores vendedores, com nota e taxa de atraso.
 4. **Risco de atraso:** pedidos em andamento ordenados pelo risco previsto pelo modelo, e a comparação entre o risco previsto e o atraso que de fato aconteceu.
 
-O detalhe de cada visual está em [`docs/paginas.md`](docs/paginas.md).
+O detalhe de cada visual está em [`docs/paginas.md`](docs/paginas.md). O relatório completo também está em PDF: [`olist-dashboard.pdf`](olist-dashboard.pdf).
+
+### Visão geral
+
+![Visão geral](docs/img/pagina1.png)
+
+### Entrega
+
+![Entrega](docs/img/pagina2.png)
+
+### Produtos e vendedores
+
+![Produtos e vendedores](docs/img/pagina3.png)
+
+### Risco de atraso
+
+![Risco de atraso](docs/img/pagina4.png)
 
 ## O que o dashboard mostra
 
@@ -48,6 +64,8 @@ O arquivo `olist-dashboard.pbix` deste repositório já traz tudo pronto.
 ## Estrutura
 
 ```
+olist-dashboard.pbix        relatório do Power BI
+olist-dashboard.pdf         relatório exportado em PDF
 exportar_dados.py           gera os CSVs, as consultas M e os valores de conferência
 tema/tema_claro.json        tema do relatório
 docs/
@@ -56,6 +74,7 @@ docs/
     medidas_dax.md          medidas DAX
     consultas_power_query.md
     valores_de_conferencia.md
+    img/                    imagens das páginas
 ```
 
 ## Limitações
